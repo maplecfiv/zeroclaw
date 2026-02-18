@@ -50,7 +50,6 @@ impl OpenAiCompatibleProvider {
             auth_header: auth_style,
             supports_responses_fallback: true,
             client: Client::builder()
-                .timeout(std::time::Duration::from_secs(60*60))
                 .connect_timeout(std::time::Duration::from_secs(60))
                 .build()
                 .unwrap_or_else(|_| Client::new()),
@@ -72,7 +71,6 @@ impl OpenAiCompatibleProvider {
             auth_header: auth_style,
             supports_responses_fallback: false,
             client: Client::builder()
-                .timeout(std::time::Duration::from_secs(60*60))
                 .connect_timeout(std::time::Duration::from_secs(60))
                 .build()
                 .unwrap_or_else(|_| Client::new()),
