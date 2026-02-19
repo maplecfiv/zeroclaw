@@ -92,7 +92,7 @@ CMD ["gateway"]
 # ── Stage 3: Production Runtime (Distroless) ─────────────────
 FROM debian:13-slim AS release
 
-RUN apt-get update && apt-get install -y git
+RUN apt-get update && apt-get install -y git coreutils vi
 
 COPY --from=builder /app/zeroclaw /usr/local/bin/zeroclaw
 COPY --from=builder /zeroclaw-data /zeroclaw-data
