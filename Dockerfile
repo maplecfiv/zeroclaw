@@ -90,7 +90,7 @@ ENTRYPOINT ["zeroclaw"]
 CMD ["gateway"]
 
 # ── Stage 3: Production Runtime (Distroless) ─────────────────
-FROM gcr.io/distroless/cc-debian13:nonroot@sha256:84fcd3c223b144b0cb6edc5ecc75641819842a9679a3a58fd6294bec47532bf7 AS release
+FROM debian:13-slim AS release
 
 COPY --from=builder /app/zeroclaw /usr/local/bin/zeroclaw
 COPY --from=builder /zeroclaw-data /zeroclaw-data
