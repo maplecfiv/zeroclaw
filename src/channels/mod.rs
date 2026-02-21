@@ -61,7 +61,7 @@ const DEFAULT_CHANNEL_INITIAL_BACKOFF_SECS: u64 = 2;
 const DEFAULT_CHANNEL_MAX_BACKOFF_SECS: u64 = 60;
 /// Timeout for processing a single channel message (LLM + tools).
 /// 300s for on-device LLMs (Ollama) which are slower than cloud APIs.
-const CHANNEL_MESSAGE_TIMEOUT_SECS: u64 = 60*60;
+const CHANNEL_MESSAGE_TIMEOUT_SECS: u64 = 60*60*3;
 const CHANNEL_PARALLELISM_PER_CHANNEL: usize = 4;
 const CHANNEL_MIN_IN_FLIGHT_MESSAGES: usize = 8;
 const CHANNEL_MAX_IN_FLIGHT_MESSAGES: usize = 64;
