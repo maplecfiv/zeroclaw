@@ -39,7 +39,7 @@ RUN --mount=type=cache,id=zeroclaw-cargo-registry,target=/usr/local/cargo/regist
     strip /app/zeroclaw
 
 # Prepare runtime directory structure and default config inline (no extra stage)
-RUN mkdir -p /zeroclaw-data/.zeroclaw /zeroclaw-data/workspace && \
+RUN mkdir -p /zeroclaw-data/.zeroclaw /zeroclaw-data/workspace /zeroclaw-data/open-skills && \
     cat > /zeroclaw-data/.zeroclaw/config.toml <<EOF && \
     chown -R 65534:65534 /zeroclaw-data
 workspace_dir = "/zeroclaw-data/workspace"
