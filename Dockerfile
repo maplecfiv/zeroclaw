@@ -104,6 +104,7 @@ ENV HOME=/zeroclaw-data
 # so config file edits are not silently overridden)
 ENV PROVIDER="openrouter"
 ENV ZEROCLAW_GATEWAY_PORT=3000
+ENV SHELL=/bin/bash 
 
 # API_KEY must be provided at runtime!
 
